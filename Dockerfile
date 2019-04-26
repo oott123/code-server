@@ -49,7 +49,7 @@ WORKDIR /home/coder/project
 
 # This assures we have a volume mounted even if the user forgot to do bind mount.
 # XXX: Workaround for GH-459 and for OpenShift compatibility.
-VOLUME [ "/home/coder/project" ]
+# VOLUME [ "/home/coder/project" ]
 
 COPY --from=0 /src/packages/server/cli-linux-x64 /usr/local/bin/code-server
 EXPOSE 8443
