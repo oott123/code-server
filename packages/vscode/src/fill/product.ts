@@ -29,9 +29,11 @@ class Product implements IProductConfiguration {
 	}
 
 	public extensionsGallery = {
-		serviceUrl: global && global.process && global.process.env.SERVICE_URL
-			|| process.env.SERVICE_URL
-			|| "https://v1.extapi.coder.com",
+		serviceUrl: "https://marketplace.visualstudio.com/_apis/public/gallery",
+		cacheUrl: "https://vscode.blob.core.windows.net/gallery/index",
+		itemUrl: "https://marketplace.visualstudio.com/items",
+		controlUrl: "https://az764295.vo.msecnd.net/extensions/marketplace.json",
+		recommendationsUrl: "https://az764295.vo.msecnd.net/extensions/workspaceRecommendations.json.gz",
 		// tslint:disable-next-line:no-any
 	} as any;
 
